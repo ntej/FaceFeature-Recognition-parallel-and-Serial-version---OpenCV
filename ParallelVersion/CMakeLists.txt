@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( ffv )
+find_package( OpenCV )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( parallel_detector parallel_detector.cpp )
+target_link_libraries( parallel_detector ${OpenCV_LIBS} )
